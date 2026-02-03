@@ -151,7 +151,7 @@ export default function IDEDashboard({
                                 </div>
                                 <div className="mt-4 p-3 bg-destructive/5 border border-destructive/30 rounded">
                                     <div className="flex gap-2">
-                                        <AlertCircle className="w-4 h-4 text-destructive flex-shrink-0 mt-0.5" />
+                                        <AlertCircle className="w-4 h-4 text-destructive shrink-0 mt-0.5" />
                                         <span className="text-destructive">Backend not connected. Using mock data.</span>
                                     </div>
                                 </div>

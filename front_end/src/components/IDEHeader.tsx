@@ -16,7 +16,7 @@ export default function IDEHeader({ onSync, isLive = true, collaborators = [] }:
     return (
         <>
             {/* Main IDE Header */}
-            <header className="fixed top-0 left-0 right-0 bg-gradient-to-b from-sidebar to-sidebar/95 border-b border-sidebar-border backdrop-blur-sm z-50">
+            <header className="fixed top-0 left-0 right-0 bg-linear-to-b from-sidebar to-sidebar/95 border-b border-sidebar-border backdrop-blur-sm z-50">
                 {/* Top Bar with Branding */}
                 <div className="px-6 py-3 flex items-center justify-between">
                     <div className="flex items-center gap-3">
@@ -61,7 +61,7 @@ export default function IDEHeader({ onSync, isLive = true, collaborators = [] }:
                                     {collaborators.map((collab, i) => (
                                         <div
                                             key={i}
-                                            className="w-6 h-6 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-xs font-bold text-white border-2 border-sidebar"
+                                            className="w-6 h-6 rounded-full bg-linear-to-br from-primary to-accent flex items-center justify-center text-xs font-bold text-white border-2 border-sidebar"
                                         >
                                             {collab.charAt(0)}
                                         </div>

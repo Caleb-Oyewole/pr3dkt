@@ -11,10 +11,10 @@ import { ENABLE_REAL_API } from '../config/constants';
  */
 export function initializeApiService() {
     // Log API configuration in debug mode
-    if (import.meta.env.DEV) {
+    if ((import.meta as any).env.DEV) {
         console.log('API Service initialized:', {
             enabled: ENABLE_REAL_API,
-            baseUrl: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
+            baseUrl: (import.meta as any).env.VITE_API_URL || 'http://localhost:5000/api',
         });
     }
 

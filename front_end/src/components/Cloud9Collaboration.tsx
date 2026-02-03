@@ -104,7 +104,7 @@ export default function Cloud9Collaboration() {
                                     >
                                         <div className="flex items-center justify-between mb-2">
                                             <div className="flex items-center gap-2">
-                                                <div className={`w-6 h-6 rounded-full bg-gradient-to-br ${collab.color} flex items-center justify-center text-xs font-bold text-white`}>
+                                                <div className={`w-6 h-6 rounded-full bg-linear-to-br ${collab.color} flex items-center justify-center text-xs font-bold text-white`}>
                                                     {collab.avatar}
                                                 </div>
                                                 <div>

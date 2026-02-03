@@ -85,7 +85,7 @@ export default function PredictionSection() {
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
             Next-Level{' '}
-            <span className="bg-gradient-to-r from-lol-gold to-lol-blue bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-lol-gold to-lol-blue bg-clip-text text-transparent">
               Predictions
             </span>
           </h2>
@@ -104,7 +104,7 @@ export default function PredictionSection() {
                   alt="AI Prediction Orb"
                   className="w-full h-full object-contain"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-lol-gold/30 to-lol-blue/30 rounded-full blur-2xl" />
+                <div className="absolute inset-0 bg-linear-to-br from-lol-gold/30 to-lol-blue/30 rounded-full blur-2xl" />
               </div>
 
               {/* Floating Stats */}
@@ -132,7 +132,7 @@ export default function PredictionSection() {
                 <Button
                   onClick={handleAnalyze}
                   disabled={isAnalyzing}
-                  className="bg-gradient-to-r from-lol-gold to-lol-blue hover:opacity-90 text-black font-semibold"
+                  className="bg-linear-to-r from-lol-gold to-lol-blue hover:opacity-90 text-black font-semibold"
                 >
                   {isAnalyzing ? (
                     <>
@@ -155,11 +155,10 @@ export default function PredictionSection() {
                   <div
                     key={index}
                     onClick={() => setSelectedPrediction(index)}
-                    className={`p-4 rounded-xl border cursor-pointer transition-all mb-3 ${
-                      selectedPrediction === index
+                    className={`p-4 rounded-xl border cursor-pointer transition-all mb-3 ${selectedPrediction === index
                         ? 'border-lol-gold bg-lol-gold/5 scale-[1.02]'
                         : 'border-white/10 hover:border-white/20 hover:bg-white/5'
-                    }`}
+                      }`}
                   >
                     <div className="flex items-start justify-between mb-3">
                       <div className="flex items-center gap-3">

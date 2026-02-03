@@ -169,7 +169,7 @@ export default function IDETerminal({ height = 200, onClose, isMaximized }: IDET
                     <p className="text-muted-foreground">Terminal ready. Type a command.</p>
                 ) : (
                     lines.map(line => (
-                        <div key={line.id} className={`${getLineColor(line.type)} whitespace-pre-wrap break-words`}>
+                        <div key={line.id} className={`${getLineColor(line.type)} whitespace-pre-wrap wrap-break-word`}>
                             {line.content}
                         </div>
                     ))

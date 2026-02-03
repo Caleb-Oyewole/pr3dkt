@@ -52,7 +52,7 @@ export default function GameStateSection() {
   return (
     <section id="draft-assistant" ref={sectionRef} className="py-20 sm:py-32 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-lol-dark-blue/10 to-background" />
+      <div className="absolute inset-0 bg-linear-to-b from-background via-lol-dark-blue/10 to-background" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -62,7 +62,7 @@ export default function GameStateSection() {
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
             Real-Time{' '}
-            <span className="bg-gradient-to-r from-lol-gold to-lol-blue bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-lol-gold to-lol-blue bg-clip-text text-transparent">
               Draft Analysis
             </span>
           </h2>
@@ -89,21 +89,19 @@ export default function GameStateSection() {
             <div className="flex items-center justify-center gap-4 mb-8">
               <button
                 onClick={() => setActiveTeam('blue')}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all ${
-                  activeTeam === 'blue'
-                    ? 'bg-lol-blue text-white shadow-lg shadow-lol-blue/30 scale-105'
-                    : 'bg-white/5 text-foreground/70 hover:bg-white/10'
-                }`}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all ${activeTeam === 'blue'
+                  ? 'bg-lol-blue text-white shadow-lg shadow-lol-blue/30 scale-105'
+                  : 'bg-white/5 text-foreground/70 hover:bg-white/10'
+                  }`}
               >
                 Blue Team
               </button>
               <button
                 onClick={() => setActiveTeam('red')}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all ${
-                  activeTeam === 'red'
-                    ? 'bg-red-600 text-white shadow-lg shadow-red-600/30 scale-105'
-                    : 'bg-white/5 text-foreground/70 hover:bg-white/10'
-                }`}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all ${activeTeam === 'red'
+                  ? 'bg-red-600 text-white shadow-lg shadow-red-600/30 scale-105'
+                  : 'bg-white/5 text-foreground/70 hover:bg-white/10'
+                  }`}
               >
                 Red Team
               </button>
@@ -119,9 +117,8 @@ export default function GameStateSection() {
                 {mockBans.map((champion, index) => (
                   <div
                     key={champion.id}
-                    className={`relative group transition-all duration-400 ${
-                      isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
-                    }`}
+                    className={`relative group transition-all duration-400 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
+                      }`}
                     style={{ transitionDelay: `${index * 100}ms` }}
                   >
                     <div className="aspect-square rounded-xl overflow-hidden border-2 border-red-500/50 relative">
@@ -149,22 +146,19 @@ export default function GameStateSection() {
                 {mockChampions.map((champion, index) => (
                   <div
                     key={champion.id}
-                    className={`relative group cursor-pointer transition-all duration-400 hover:scale-105 hover:-translate-y-2 ${
-                      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-                    }`}
+                    className={`relative group cursor-pointer transition-all duration-400 hover:scale-105 hover:-translate-y-2 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+                      }`}
                     style={{ transitionDelay: `${index * 100 + 300}ms` }}
                   >
-                    <div className={`aspect-square rounded-xl overflow-hidden border-2 ${
-                      activeTeam === 'blue' ? 'border-lol-blue' : 'border-red-500'
-                    } relative shadow-lg`}>
+                    <div className={`aspect-square rounded-xl overflow-hidden border-2 ${activeTeam === 'blue' ? 'border-lol-blue' : 'border-red-500'
+                      } relative shadow-lg`}>
                       <img
                         src={champion.image}
                         alt={champion.name}
                         className="w-full h-full object-cover"
                       />
-                      <div className={`absolute inset-0 bg-gradient-to-t ${
-                        activeTeam === 'blue' ? 'from-lol-blue/50' : 'from-red-500/50'
-                      } to-transparent opacity-0 group-hover:opacity-100 transition-opacity`} />
+                      <div className={`absolute inset-0 bg-linear-to-t ${activeTeam === 'blue' ? 'from-lol-blue/50' : 'from-red-500/50'
+                        } to-transparent opacity-0 group-hover:opacity-100 transition-opacity`} />
                     </div>
                     <div className="mt-2 text-center">
                       <p className="font-semibold text-sm">{champion.name}</p>

@@ -121,7 +121,7 @@ export default function PredictionSection({ gameState = mockGameState, onPredict
                     </div>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
                         Next-Level{' '}
-                        <span className="bg-gradient-to-r from-lol-gold to-lol-blue bg-clip-text text-transparent">
+                        <span className="bg-linear-to-r from-lol-gold to-lol-blue bg-clip-text text-transparent">
                             Predictions
                         </span>
                     </h2>
@@ -140,7 +140,7 @@ export default function PredictionSection({ gameState = mockGameState, onPredict
                                     alt="AI Prediction Orb"
                                     className="w-full h-full object-contain"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-br from-lol-gold/30 to-lol-blue/30 rounded-full blur-2xl" />
+                                <div className="absolute inset-0 bg-linear-to-br from-lol-gold/30 to-lol-blue/30 rounded-full blur-2xl" />
                             </div>
 
                             {/* Floating Stats */}
@@ -165,7 +165,7 @@ export default function PredictionSection({ gameState = mockGameState, onPredict
                         {/* Error Alert */}
                         {apiError && !useMock && (
                             <div className="glass-card p-4 border border-red-500/30 bg-red-500/5 rounded-xl flex gap-3">
-                                <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+                                <AlertCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
                                 <div>
                                     <p className="font-semibold text-red-500">API Error</p>
                                     <p className="text-sm text-foreground/70">{apiError.message}</p>
@@ -186,7 +186,7 @@ export default function PredictionSection({ gameState = mockGameState, onPredict
                                     <Button
                                         onClick={handleAnalyze}
                                         disabled={isLoadingPredictions}
-                                        className="bg-gradient-to-r from-lol-gold to-lol-blue hover:opacity-90 text-black font-semibold"
+                                        className="bg-linear-to-r from-lol-gold to-lol-blue hover:opacity-90 text-black font-semibold"
                                     >
                                         {isLoadingPredictions ? (
                                             <>
@@ -211,8 +211,8 @@ export default function PredictionSection({ gameState = mockGameState, onPredict
                                         key={`${prediction.champion}-${index}`}
                                         onClick={() => handlePredictionSelect(index)}
                                         className={`p-4 rounded-xl border cursor-pointer transition-all mb-3 ${selectedPrediction === index
-                                                ? 'border-lol-gold bg-lol-gold/5 scale-[1.02]'
-                                                : 'border-white/10 hover:border-white/20 hover:bg-white/5'
+                                            ? 'border-lol-gold bg-lol-gold/5 scale-[1.02]'
+                                            : 'border-white/10 hover:border-white/20 hover:bg-white/5'
                                             }`}
                                     >
                                         <div className="flex items-start justify-between mb-3">
