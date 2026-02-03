@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "target": "ES2023",
+        "lib": [
+            "ES2023"
+        ],
+        "module": "ESNext",
+        "skipLibCheck": true,
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": true,
+        "verbatimModuleSyntax": true,
+        "moduleDetection": "force",
+        "noEmit": true,
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "baseUrl": "."
+    },
+    "include": [
+        "front_end/vite.config.ts",
+        "front_end/eslint.config.js"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "build"
+    ]
+}

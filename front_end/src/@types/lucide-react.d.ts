@@ -1,0 +1,28 @@
+declare module 'lucide-react' {
+  export const AlertCircle: any;
+  export const X: any;
+  export const Check: any;
+  export const Menu: any;
+  export const Settings: any;
+  export const Code: any;
+  export const Terminal: any;
+  export const MessageSquare: any;
+  export const Users: any;
+  export const Play: any;
+  export const Home: any;
+  export const HelpCircle: any;
+  export const ChevronDown: any;
+  export const ChevronUp: any;
+  export const GitBranch: any;
+  export const Cloud: any;
+  export const Code2: any;
+  export const Zap: any;
+  export const Sparkles: any;
+  export const TrendingUp: any;
+  export const Target: any;
+  export const FileText: any;
+  export const CheckCircle: any;
+  export const Copy: any;
+  export const Trash2: any;
+  export const User: any;
+}

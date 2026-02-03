@@ -1,0 +1,66 @@
+{
+    "compilerOptions": {
+        "target": "ES2020",
+        "useDefineForClassFields": true,
+        "lib": [
+            "ES2020",
+            "DOM",
+            "DOM.Iterable"
+        ],
+        "module": "ESNext",
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "strict": false,
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
+        "noFallthroughCasesInSwitch": true,
+        "moduleResolution": "node",
+        "allowImportingTsExtensions": true,
+        "baseUrl": ".",
+        "typeRoots": [
+            "./@types",
+            "./src/@types",
+            "./front_end/src/@types"
+        ],
+        "types": [
+            "react",
+            "react-dom"
+        ],
+        "paths": {
+            "@/*": [
+                "./src/*",
+                "./front_end/src/*"
+            ],
+            "@components/*": [
+                "./src/components/*",
+                "./front_end/src/components/*"
+            ],
+            "@hooks/*": [
+                "./src/hooks/*",
+                "./front_end/src/hooks/*"
+            ],
+            "@services/*": [
+                "./src/services/*",
+                "./front_end/src/services/*"
+            ],
+            "@types/*": [
+                "./src/types/*",
+                "./front_end/src/types/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*",
+        "front_end/src/**/*",
+        "@types/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "build"
+    ]
+}
