@@ -2,44 +2,84 @@
 
 @layer base {
   :root {
-    --radius: 0.75rem;
-    --background: 8% 0 0;
-    --foreground: 98% 0 0;
-    --card: 12% 0 0;
-    --card-foreground: 98% 0 0;
-    --popover: 15% 0 0;
-    --popover-foreground: 98% 0 0;
-    --primary: 75% 0.15 45;
-    --primary-foreground: 8% 0 0;
-    --secondary: 25% 0 0;
-    --secondary-foreground: 98% 0 0;
-    --muted: 20% 0 0;
-    --muted-foreground: 65% 0 0;
-    --accent: 30% 0 0;
-    --accent-foreground: 98% 0 0;
-    --destructive: 60% 0.25 25;
-    --destructive-foreground: 98% 0 0;
-    --border: 98% 0 0 / 10%;
-    --input: 98% 0 0 / 15%;
-    --ring: 75% 0.15 45;
-    --chart-1: 65% 0.22 45;
-    --chart-2: 60% 0.18 220;
-    --chart-3: 70% 0.2 280;
-    --chart-4: 55% 0.25 340;
-    --chart-5: 68% 0.19 160;
-    --sidebar: 12% 0 0;
-    --sidebar-foreground: 98% 0 0;
-    --sidebar-primary: 75% 0.15 45;
-    --sidebar-primary-foreground: 8% 0 0;
-    --sidebar-accent: 30% 0 0;
-    --sidebar-accent-foreground: 98% 0 0;
-    --sidebar-border: 98% 0 0 / 10%;
-    --sidebar-ring: 75% 0.15 45;
+    --radius: 0.5rem;
 
-    /* League of Legends themed colors */
-    --lol-gold: 0.75 0.15 45;
-    --lol-blue: 0.6 0.18 220;
-    --lol-dark-blue: 0.25 0.12 240;
+    /* JetBrains IDE Color Scheme */
+    --background: 10.5% 0 0;
+    /* #1e1e1e - Dark editor background */
+    --foreground: 92% 0 0;
+    /* #e8e8e8 - Light text */
+    --card: 14% 0 0;
+    /* #2b2b2b - Card background */
+    --card-foreground: 92% 0 0;
+    /* #e8e8e8 - Card text */
+    --popover: 16% 0 0;
+    /* #313131 - Popover background */
+    --popover-foreground: 92% 0 0;
+    /* #e8e8e8 - Popover text */
+
+    /* JetBrains Primary Colors */
+    --primary: 60% 0.2 220;
+    /* #3574F0 - JetBrains Blue */
+    --primary-foreground: 92% 0 0;
+    /* White text */
+    --secondary: 50% 0.18 45;
+    /* #FF9D47 - JetBrains Orange */
+    --secondary-foreground: 10.5% 0 0;
+
+    /* IDE Elements */
+    --muted: 35% 0 0;
+    /* #555555 - Muted gray */
+    --muted-foreground: 75% 0 0;
+    /* #c0c0c0 - Muted text */
+    --accent: 60% 0.22 220;
+    /* #4B8FFF - Bright blue accent */
+    --accent-foreground: 10.5% 0 0;
+    --destructive: 65% 0.25 10;
+    /* #FF6B6B - Red for errors */
+    --destructive-foreground: 92% 0 0;
+
+    /* Cloud9/IDE specific */
+    --border: 35% 0 0 / 30%;
+    /* Subtle borders */
+    --input: 16% 0 0;
+    /* Input background */
+    --ring: 60% 0.2 220;
+    /* Focus ring */
+
+    /* IDE Status Colors */
+    --chart-1: 65% 0.22 45;
+    /* Gold/Warning */
+    --chart-2: 60% 0.18 220;
+    /* Blue/Info */
+    --chart-3: 50% 0.2 120;
+    /* Green/Success */
+    --chart-4: 65% 0.25 10;
+    /* Red/Error */
+    --chart-5: 55% 0.2 280;
+    /* Purple/Debug */
+
+    /* Sidebar/Navigation */
+    --sidebar: 12% 0 0;
+    /* #1f1f1f - Sidebar background */
+    --sidebar-foreground: 92% 0 0;
+    /* #e8e8e8 - Sidebar text */
+    --sidebar-primary: 60% 0.2 220;
+    /* Blue highlight */
+    --sidebar-primary-foreground: 92% 0 0;
+    --sidebar-accent: 50% 0.18 45;
+    /* Orange accent */
+    --sidebar-accent-foreground: 10.5% 0 0;
+    --sidebar-border: 35% 0 0 / 30%;
+    --sidebar-ring: 60% 0.2 220;
+
+    /* Game Prediction Colors (pr3dkt themed) */
+    --game-gold: 60% 0.18 45;
+    /* Game gold */
+    --game-blue: 50% 0.2 220;
+    /* Game blue */
+    --cloud-accent: 60% 0.2 220;
+    /* Cloud9 accent */
   }
 
   .dark {
@@ -132,6 +172,7 @@
 }
 
 @layer utilities {
+
   /* Float animations */
   .animate-float {
     animation: float 3s ease-in-out infinite;
@@ -143,10 +184,12 @@
   }
 
   @keyframes float {
+
     0%,
     100% {
       transform: translateY(0px);
     }
+
     50% {
       transform: translateY(-30px);
     }
@@ -172,6 +215,7 @@
     from {
       opacity: 0;
     }
+
     to {
       opacity: 1;
     }
@@ -182,6 +226,7 @@
       opacity: 0;
       transform: translateY(30px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -193,6 +238,7 @@
       opacity: 0;
       transform: scale(0.8);
     }
+
     to {
       opacity: 1;
       transform: scale(1);
@@ -208,6 +254,7 @@
     from {
       transform: translateY(-100%);
     }
+
     to {
       transform: translateY(0);
     }
@@ -219,10 +266,12 @@
   }
 
   @keyframes bounceSlow {
+
     0%,
     100% {
       transform: translateY(0);
     }
+
     50% {
       transform: translateY(-10px);
     }
@@ -237,6 +286,7 @@
     from {
       transform: rotate(0deg);
     }
+
     to {
       transform: rotate(360deg);
     }
@@ -251,6 +301,7 @@
     from {
       box-shadow: 0 0 20px oklch(var(--lol-gold) / 0.3);
     }
+
     to {
       box-shadow: 0 0 40px oklch(var(--lol-gold) / 0.6);
     }

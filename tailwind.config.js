@@ -14,6 +14,10 @@ export default {
                 '2xl': '1400px'
             }
         },
+        fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+        },
         extend: {
             colors: {
                 border: 'oklch(var(--border))',
@@ -66,9 +70,9 @@ export default {
                     border: 'oklch(var(--sidebar-border))',
                     ring: 'oklch(var(--sidebar-ring))'
                 },
-                'lol-gold': 'oklch(var(--lol-gold))',
-                'lol-blue': 'oklch(var(--lol-blue))',
-                'lol-dark-blue': 'oklch(var(--lol-dark-blue))',
+                'cloud-accent': 'oklch(var(--cloud-accent))',
+                'game-gold': 'oklch(var(--game-gold))',
+                'game-blue': 'oklch(var(--game-blue))',
             },
             borderRadius: {
                 lg: 'var(--radius)',
@@ -77,8 +81,10 @@ export default {
             },
             boxShadow: {
                 xs: '0 1px 2px 0 rgba(0,0,0,0.05)',
-                'glow-gold': '0 0 20px oklch(var(--lol-gold) / 0.3)',
-                'glow-blue': '0 0 20px oklch(var(--lol-blue) / 0.3)',
+                'ide-focus': '0 0 0 3px oklch(var(--primary) / 0.1)',
+                'cloud-pulse': '0 0 10px oklch(var(--cloud-accent) / 0.4)',
+                'error-glow': '0 0 15px oklch(var(--destructive) / 0.3)',
+                'success-glow': '0 0 15px oklch(var(--chart-3) / 0.3)',
             },
             keyframes: {
                 'accordion-down': {
@@ -93,18 +99,65 @@ export default {
                     '0%, 100%': { transform: 'translateY(0px)' },
                     '50%': { transform: 'translateY(-20px)' }
                 },
-                'glow': {
-                    'from': { boxShadow: '0 0 20px oklch(var(--lol-gold) / 0.3)' },
-                    'to': { boxShadow: '0 0 40px oklch(var(--lol-gold) / 0.6)' }
-                }
+                'float-delayed': {
+                    '0%, 100%': { transform: 'translateY(0px)' },
+                    '50%': { transform: 'translateY(-20px)' }
+                },
+                'pulse-glow': {
+                    '0%, 100%': {
+                        opacity: '0.7',
+                        boxShadow: '0 0 0 0 oklch(var(--primary) / 0.4)'
+                    },
+                    '50%': {
+                        opacity: '1',
+                        boxShadow: '0 0 0 10px oklch(var(--primary) / 0)'
+                    }
+                },
+                'sync-spin': {
+                    to: { transform: 'rotate(360deg)' }
+                },
+                'live-pulse': {
+                    '0%, 100%': {
+                        backgroundColor: '#2ecc71',
+                        boxShadow: '0 0 10px rgba(46, 204, 113, 0.6)'
+                    },
+                    '50%': {
+                        backgroundColor: '#27ae60',
+                        boxShadow: '0 0 20px rgba(46, 204, 113, 0.3)'
+                    }
+                },
+                'code-highlight': {
+                    'from': { backgroundColor: 'oklch(var(--primary) / 0.1)' },
+                    'to': { backgroundColor: 'transparent' }
+                },
+                'panel-enter': {
+                    from: {
+                        opacity: '0',
+                        transform: 'translateX(-20px)'
+                    },
+                    to: {
+                        opacity: '1',
+                        transform: 'translateX(0)'
+                    }
+                },
             },
             animation: {
                 'accordion-down': 'accordion-down 0.2s ease-out',
                 'accordion-up': 'accordion-up 0.2s ease-out',
                 'float': 'float 3s ease-in-out infinite',
-                'glow': 'glow 2s ease-in-out infinite alternate',
+                'float-delayed': 'float 3s ease-in-out 0.5s infinite',
+                'spin-slow': 'sync-spin 2s linear infinite',
+                'pulse-glow': 'pulse-glow 2s infinite',
+                'live-indicator': 'live-pulse 2s infinite',
+                'code-highlight': 'code-highlight 2s ease-out',
+                'panel-enter': 'panel-enter 0.3s ease-out',
+            },
+            backgroundImage: {
+                'gradient-ide': 'linear-gradient(135deg, oklch(var(--primary) / 0.1) 0%, oklch(var(--accent) / 0.05) 100%)',
+                'gradient-cloud': 'linear-gradient(135deg, oklch(var(--cloud-accent) / 0.1) 0%, oklch(var(--primary) / 0.05) 100%)',
             }
         }
     },
     plugins: [typography, containerQueries, animate]
 };
+

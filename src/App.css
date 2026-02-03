@@ -1,0 +1,438 @@
+/* App.css - JetBrains IDE + Cloud9 Aesthetic */
+
+/* ==================== Typography & Fonts ==================== */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body,
+html {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==================== IDE Editor Aesthetic ==================== */
+.code-block,
+.terminal,
+.editor-content {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+}
+
+/* ==================== Smooth Transitions ==================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ==================== IDE Panel Animations ==================== */
+@keyframes panel-enter {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes panel-exit {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+/* ==================== Cloud IDE Pulse ==================== */
+@keyframes cloud-pulse {
+
+  0%,
+  100% {
+    opacity: 0.7;
+    box-shadow: 0 0 0 0 rgba(59, 116, 240, 0.4);
+  }
+
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 0 10px rgba(59, 116, 240, 0);
+  }
+}
+
+/* ==================== Sync/Live Collaboration ==================== */
+@keyframes sync-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes live-indicator {
+
+  0%,
+  100% {
+    background-color: #2ecc71;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.6);
+  }
+
+  50% {
+    background-color: #27ae60;
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.3);
+  }
+}
+
+/* ==================== Focus States ==================== */
+@keyframes focus-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 2px rgba(59, 116, 240, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 0 4px rgba(59, 116, 240, 0.5);
+  }
+}
+
+/* ==================== Error/Warning Highlight ==================== */
+@keyframes error-pulse {
+
+  0%,
+  100% {
+    box-shadow: inset 0 0 0 1px rgba(255, 107, 107, 0.3);
+  }
+
+  50% {
+    box-shadow: inset 0 0 0 1px rgba(255, 107, 107, 0.6);
+  }
+}
+
+@keyframes warning-pulse {
+
+  0%,
+  100% {
+    box-shadow: inset 0 0 0 1px rgba(255, 193, 7, 0.3);
+  }
+
+  50% {
+    box-shadow: inset 0 0 0 1px rgba(255, 193, 7, 0.6);
+  }
+}
+
+/* ==================== Status Bar Effects ==================== */
+@keyframes status-pulse {
+
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ==================== Classes for IDE Components ==================== */
+
+/* IDE Panel */
+.ide-panel {
+  background: oklab(var(--card));
+  border: 1px solid oklab(var(--border));
+  border-radius: var(--radius);
+  animation: panel-enter 0.3s ease-out;
+}
+
+/* Status Bar (bottom bar like IDE) */
+.status-bar {
+  background: oklab(var(--sidebar));
+  border-top: 1px solid oklab(var(--sidebar-border));
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: oklab(var(--sidebar-foreground));
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+.status-item.active {
+  color: oklab(var(--primary));
+}
+
+/* Live Indicator (Cloud9 collaboration) */
+.live-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 12px;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #2ecc71;
+  animation: live-indicator 2s infinite;
+}
+
+/* Sync Status */
+.sync-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 12px;
+  color: oklab(var(--muted-foreground));
+}
+
+.sync-spinner {
+  width: 12px;
+  height: 12px;
+  animation: sync-spin 1s linear infinite;
+}
+
+/* IDE Breadcrumb Navigation */
+.breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: oklab(var(--muted-foreground));
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid oklab(var(--border));
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.breadcrumb-separator {
+  color: oklab(var(--muted-foreground));
+  opacity: 0.5;
+}
+
+/* Code Block Styling */
+.code-block {
+  background: oklab(var(--input));
+  border: 1px solid oklab(var(--border));
+  border-radius: var(--radius);
+  padding: 1rem;
+  overflow-x: auto;
+  color: oklab(var(--foreground));
+}
+
+.code-block .syntax-keyword {
+  color: #569cd6;
+  font-weight: 600;
+}
+
+.code-block .syntax-string {
+  color: #ce9178;
+}
+
+.code-block .syntax-function {
+  color: #dcdcaa;
+}
+
+.code-block .syntax-comment {
+  color: #6a9955;
+  opacity: 0.8;
+}
+
+.code-block .syntax-type {
+  color: #4ec9b0;
+}
+
+/* Terminal/Console */
+.terminal {
+  background: oklab(var(--sidebar));
+  border: 1px solid oklab(var(--sidebar-border));
+  border-radius: var(--radius);
+  padding: 1rem;
+  color: oklab(var(--foreground));
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.terminal-line {
+  display: flex;
+  gap: 0.5rem;
+  line-height: 1.6;
+}
+
+.terminal-prompt {
+  color: #4ec9b0;
+  user-select: none;
+}
+
+.terminal-command {
+  color: oklab(var(--foreground));
+}
+
+.terminal-output {
+  color: oklab(var(--muted-foreground));
+}
+
+.terminal-error {
+  color: #f48771;
+  font-weight: 500;
+}
+
+.terminal-success {
+  color: #6a9955;
+}
+
+/* ==================== Focus & Interactive States ==================== */
+
+/* Button with IDE focus */
+.btn-ide:focus {
+  animation: focus-glow 1.5s infinite;
+}
+
+/* Input field with IDE styling */
+.input-ide {
+  background: oklab(var(--input));
+  border: 1px solid oklab(var(--border));
+  border-radius: var(--radius);
+  padding: 0.5rem 0.75rem;
+  color: oklab(var(--foreground));
+  font-family: var(--font-mono);
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.input-ide:focus {
+  border-color: oklab(var(--primary));
+  box-shadow: 0 0 0 3px oklab(var(--primary) / 0.1);
+}
+
+/* Error state */
+.input-error {
+  border-color: oklab(var(--destructive));
+  animation: error-pulse 1.5s infinite;
+}
+
+/* Warning state */
+.input-warning {
+  border-color: #ffc107;
+  animation: warning-pulse 1.5s infinite;
+}
+
+/* ==================== Cloud Features ==================== */
+
+/* Collaboration Avatar Stack */
+.collab-avatars {
+  display: flex;
+  align-items: center;
+  gap: -0.5rem;
+}
+
+.collab-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid oklab(var(--background));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  color: white;
+}
+
+/* Cloud Sync Badge */
+.cloud-sync {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background: oklab(var(--primary) / 0.1);
+  border: 1px solid oklab(var(--primary) / 0.3);
+  border-radius: 999px;
+  font-size: 11px;
+  color: oklab(var(--primary));
+  font-weight: 500;
+}
+
+.cloud-sync.synced {
+  animation: cloud-pulse 2s infinite;
+}
+
+/* ==================== Glass Morphism for IDE ==================== */
+
+.glass-ide {
+  background: oklab(var(--card) / 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid oklab(var(--border) / 0.5);
+  border-radius: var(--radius);
+}
+
+/* ==================== Responsive Adjustments ==================== */
+
+@media (max-width: 768px) {
+  .status-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .breadcrumb-nav {
+    font-size: 11px;
+    padding: 0.5rem;
+    overflow-x: auto;
+  }
+
+  .code-block {
+    font-size: 12px;
+    padding: 0.75rem;
+  }
+}
