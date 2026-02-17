@@ -1,9 +1,9 @@
 import { useRef, useEffect, useState } from 'react';
-import { Brain, Target, TrendingUp, Zap, Shield, Users } from 'lucide-react';
+import { Lightbulb, Target, TrendingUp, Zap, Lock, Users } from 'lucide-react';
 
 const features = [
   {
-    icon: Brain,
+    icon: Lightbulb,
     title: 'AI-Powered Predictions',
     description: 'Advanced machine learning algorithms analyze millions of matches to predict optimal picks.',
     gradient: 'from-lol-gold to-yellow-600',
@@ -27,7 +27,7 @@ const features = [
     gradient: 'from-lol-gold to-orange-600',
   },
   {
-    icon: Shield,
+    icon: Lock,
     title: 'Team Composition',
     description: 'Analyze team balance and identify missing roles or damage types.',
     gradient: 'from-green-500 to-emerald-600',
@@ -68,7 +68,7 @@ export default function FeaturesSection() {
   return (
     <section id="features" ref={sectionRef} className="py-20 sm:py-32 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-lol-dark-blue/5 to-background" />
+      <div className="absolute inset-0 bg-linear-to-b from-background via-lol-dark-blue/5 to-background" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -78,7 +78,7 @@ export default function FeaturesSection() {
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
             Why Choose{' '}
-            <span className="bg-gradient-to-r from-lol-gold to-lol-blue bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-lol-gold to-lol-blue bg-clip-text text-transparent">
               LoL Draft AI
             </span>
           </h2>
@@ -100,10 +100,10 @@ export default function FeaturesSection() {
               <div className="glass-card p-6 sm:p-8 h-full border border-white/10 hover:border-white/20 transition-all duration-300 hover:-translate-y-2">
                 {/* Icon */}
                 <div className="relative mb-6">
-                  <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${feature.gradient} p-3 shadow-lg`}>
+                  <div className={`w-14 h-14 rounded-xl bg-linear-to-br ${feature.gradient} p-3 shadow-lg`}>
                     <feature.icon className="w-full h-full text-white" />
                   </div>
-                  <div className={`absolute inset-0 w-14 h-14 rounded-xl bg-gradient-to-br ${feature.gradient} blur-xl opacity-50 group-hover:opacity-75 transition-opacity`} />
+                  <div className={`absolute inset-0 w-14 h-14 rounded-xl bg-linear-to-br ${feature.gradient} blur-xl opacity-50 group-hover:opacity-75 transition-opacity`} />
                 </div>
 
                 {/* Content */}
@@ -115,7 +115,7 @@ export default function FeaturesSection() {
                 </p>
 
                 {/* Hover Effect */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-lol-gold/5 to-lol-blue/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+                <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-lol-gold/5 to-lol-blue/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
               </div>
             </div>
           ))}

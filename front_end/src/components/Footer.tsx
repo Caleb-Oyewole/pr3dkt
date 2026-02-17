@@ -1,13 +1,12 @@
-import { Heart, Zap } from 'lucide-react';
-import { SiGithub, SiX, SiDiscord } from 'react-icons/si';
+import { Heart, Zap, Github, Share2, MessageSquare } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: SiGithub, href: '#', label: 'GitHub' },
-    { icon: SiX, href: '#', label: 'X (Twitter)' },
-    { icon: SiDiscord, href: '#', label: 'Discord' },
+    { icon: Github, href: '#', label: 'GitHub' },
+    { icon: Share2, href: '#', label: 'X (Twitter)' },
+    { icon: MessageCircle, href: '#', label: 'Discord' },
   ];
 
   const footerLinks = [
@@ -51,7 +50,7 @@ export default function Footer() {
                 <Zap className="w-8 h-8 text-lol-gold" fill="currentColor" />
                 <div className="absolute inset-0 blur-lg bg-lol-gold/30" />
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-lol-gold via-lol-blue to-lol-gold bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-linear-to-r from-lol-gold via-lol-blue to-lol-gold bg-clip-text text-transparent">
                 LoL Draft AI
               </span>
             </div>

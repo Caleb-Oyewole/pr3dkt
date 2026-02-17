@@ -9,7 +9,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from datetime import datetime
 import os
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 
 app = Flask(__name__)
 
@@ -30,14 +30,14 @@ API_PREFIX = "/api"
 
 class APIError(Exception):
     """Custom API error class"""
-    def __init__(self, message: str, status_code: int = 400, details: Dict[str, Any] = None):
+    def __init__(self, message: str, status_code: int = 400, details: Optional[Dict[str, Any]] = None):
         self.message = message
         self.status_code = status_code
         self.details = details or {}
         super().__init__(self.message)
 
 
-def create_response(success: bool, data: Any = None, error: str = None, details: Dict = None, status_code: int = 200):
+def create_response(success: bool, data: Any = None, error: Optional[str] = None, details: Optional[Dict] = None, status_code: int = 200):
     """Create standardized API response"""
     response = {
         "success": success,

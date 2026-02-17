@@ -3,7 +3,7 @@
  * Quick access to commands and features (Cmd/Ctrl+K)
  */
 
-import { Search, Code, Zap, FileText, Settings, Cloud, HelpCircle, Users } from 'lucide-react';
+import { Command, Code, Zap, FileText, Settings, Cloud, HelpCircle, Users } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 
@@ -163,7 +163,7 @@ export default function IDECommandPalette({ isOpen, onClose }: CommandPalettePro
                 <div className="w-full max-w-2xl rounded-lg bg-card border border-border shadow-2xl overflow-hidden">
                     {/* Search Input */}
                     <div className="flex items-center gap-3 px-4 py-4 border-b border-border">
-                        <Search className="w-5 h-5 text-muted-foreground" />
+                        <Command className="w-5 h-5 text-muted-foreground" />
                         <input
                             autoFocus
                             type="text"

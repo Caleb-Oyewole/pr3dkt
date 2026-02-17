@@ -1,9 +1,9 @@
 import { useRef, useEffect, useState } from 'react';
-import { UserPlus, Sparkles, Target, Trophy } from 'lucide-react';
+import { Users, Sparkles, Target, Award } from 'lucide-react';
 
 const steps = [
   {
-    icon: UserPlus,
+    icon: Users,
     title: 'Connect Your Account',
     description: 'Link your League of Legends account to get personalized recommendations.',
     number: '01',
@@ -21,7 +21,7 @@ const steps = [
     number: '03',
   },
   {
-    icon: Trophy,
+    icon: Award,
     title: 'Dominate Games',
     description: 'Make informed decisions and increase your win rate significantly.',
     number: '04',
@@ -72,7 +72,7 @@ export default function HowItWorksSection() {
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
             Simple, Fast &{' '}
-            <span className="bg-gradient-to-r from-lol-gold to-lol-blue bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-lol-gold to-lol-blue bg-clip-text text-transparent">
               Effortless
             </span>
           </h2>
@@ -93,18 +93,18 @@ export default function HowItWorksSection() {
             >
               {/* Connector Line */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-lol-gold/50 to-transparent -translate-x-1/2 z-0" />
+                <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-linear-to-r from-lol-gold/50 to-transparent -translate-x-1/2 z-0" />
               )}
 
               <div className="glass-card p-6 sm:p-8 text-center relative z-10 border border-white/10 hover:border-lol-gold/50 transition-all duration-300 group">
                 {/* Number Badge */}
-                <div className="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-gradient-to-br from-lol-gold to-lol-blue flex items-center justify-center font-bold text-black shadow-lg">
+                <div className="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-linear-to-br from-lol-gold to-lol-blue flex items-center justify-center font-bold text-black shadow-lg">
                   {step.number}
                 </div>
 
                 {/* Icon */}
                 <div className="relative inline-block mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-lol-gold/20 to-lol-blue/20 flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 rounded-2xl bg-linear-to-br from-lol-gold/20 to-lol-blue/20 flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-300">
                     <step.icon className="w-8 h-8 text-lol-gold" />
                   </div>
                   <div className="absolute inset-0 rounded-2xl bg-lol-gold/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />

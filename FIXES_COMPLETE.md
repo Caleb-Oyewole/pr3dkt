@@ -16,7 +16,7 @@ All **30+ code problems** in the PROBLEMS tab have been identified and **fixed**
 **Examples:**
 ```tsx
 // BEFORE
-className="bg-gradient-to-r from-lol-gold to-lol-blue"
+className="bg-linear-to-r from-lol-gold to-lol-blue"
 
 // AFTER
 className="bg-linear-to-r from-lol-gold to-lol-blue"

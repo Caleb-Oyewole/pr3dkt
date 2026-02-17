@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Button } from './ui/button';
-import { Sparkles, TrendingUp, Shield } from 'lucide-react';
+import { Sparkles, TrendingUp, Lock } from 'lucide-react';
 
 export default function HeroSection() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -28,7 +28,7 @@ export default function HeroSection() {
           alt="Summoner's Rift"
           className="w-full h-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-background" />
+        <div className="absolute inset-0 bg-linear-to-b from-background via-background/50 to-background" />
       </div>
 
       {/* Animated Orbs */}
@@ -46,7 +46,7 @@ export default function HeroSection() {
           {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in-up" style={{ animationDelay: '200ms' }}>
             Master Your{' '}
-            <span className="bg-gradient-to-r from-lol-gold via-lol-blue to-lol-gold bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-lol-gold via-lol-blue to-lol-gold bg-clip-text text-transparent">
               Draft Phase
             </span>
             <br />
@@ -63,7 +63,7 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in-up" style={{ animationDelay: '600ms' }}>
             <Button
               size="lg"
-              className="bg-gradient-to-r from-lol-gold to-lol-blue hover:opacity-90 text-black font-semibold px-8 py-6 text-lg shadow-2xl shadow-lol-gold/30 group transition-all hover:scale-105"
+              className="bg-linear-to-r from-lol-gold to-lol-blue hover:opacity-90 text-black font-semibold px-8 py-6 text-lg shadow-2xl shadow-lol-gold/30 group transition-all hover:scale-105"
             >
               Start Drafting
               <TrendingUp className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -80,7 +80,7 @@ export default function HeroSection() {
           {/* Feature Pills */}
           <div className="flex flex-wrap items-center justify-center gap-6 animate-fade-in-up" style={{ animationDelay: '800ms' }}>
             {[
-              { icon: Shield, text: 'Real-time Analysis' },
+              { icon: Lock, text: 'Real-time Analysis' },
               { icon: TrendingUp, text: '95% Accuracy' },
               { icon: Sparkles, text: 'AI-Powered' },
             ].map((feature, index) => (

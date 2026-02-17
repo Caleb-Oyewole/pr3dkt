@@ -37,7 +37,7 @@ export default function Header() {
               <Zap className="w-8 h-8 text-lol-gold" fill="currentColor" />
               <div className="absolute inset-0 blur-lg bg-lol-gold/30" />
             </div>
-            <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-lol-gold via-lol-blue to-lol-gold bg-clip-text text-transparent">
+            <span className="text-xl sm:text-2xl font-bold bg-linear-to-r from-lol-gold via-lol-blue to-lol-gold bg-clip-text text-transparent">
               LoL Draft AI
             </span>
           </div>
@@ -52,14 +52,14 @@ export default function Header() {
                 className="text-sm font-medium text-foreground/80 hover:text-lol-gold transition-colors relative group animate-fade-in-up"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-lol-gold to-lol-blue group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-linear-to-r from-lol-gold to-lol-blue group-hover:w-full transition-all duration-300" />
               </a>
             ))}
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:block animate-fade-in-scale" style={{ animationDelay: '500ms' }}>
-            <Button className="bg-gradient-to-r from-lol-gold to-lol-blue hover:opacity-90 text-black font-semibold px-6 shadow-lg shadow-lol-gold/20 transition-all hover:scale-105">
+            <Button className="bg-linear-to-r from-lol-gold to-lol-blue hover:opacity-90 text-black font-semibold px-6 shadow-lg shadow-lol-gold/20 transition-all hover:scale-105">
               Get Started
             </Button>
           </div>
@@ -91,7 +91,7 @@ export default function Header() {
               {item.label}
             </a>
           ))}
-          <Button className="bg-gradient-to-r from-lol-gold to-lol-blue hover:opacity-90 text-black font-semibold w-full">
+          <Button className="bg-linear-to-r from-lol-gold to-lol-blue hover:opacity-90 text-black font-semibold w-full">
             Get Started
           </Button>
         </nav>

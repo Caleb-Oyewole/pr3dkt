@@ -132,9 +132,9 @@ export default function IDEDashboard({
                             <div className="space-y-2 text-muted-foreground">
                                 <div>
                                     <span className="syntax-keyword">import</span>
-                                    <span> {{ </span>
+                                    <span>{"{{"}</span>
                                     <span className="syntax-type">apiService</span>
-                                    <span> }} </span>
+                                    <span>{"}}"}</span>
                                     <span className="syntax-keyword">from</span>
                                     <span className="syntax-string">'@/services/api.service'</span>
                                 </div>

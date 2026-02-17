@@ -3,7 +3,7 @@
  * Configure IDE theme, behavior, and features
  */
 
-import { X, Moon, Sun, Bell, Database, Eye, Type } from 'lucide-react';
+import { X, Monitor, Lightbulb, AlertCircle, Database, Eye, Type } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from './ui/button';
 

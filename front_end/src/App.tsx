@@ -33,7 +33,7 @@ function App() {
   }, [isCommandPaletteOpen]);
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} storageKey="theme">
       <div className="h-screen w-screen flex flex-col bg-background text-foreground overflow-hidden">
         {/* IDE Header with JetBrains + Cloud9 aesthetic */}
         <IDEHeader
